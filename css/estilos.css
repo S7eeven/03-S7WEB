@@ -1,0 +1,544 @@
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; /* Reset para REMS- 62.5% = 10px de 16px  */
+}
+
+*,*::before, *::after{
+  box-sizing: inherit;
+}
+
+
+/*Fuentes tipo de letra*/
+body{
+font-family: 'Roboto', sans-serif;
+font-size: 1.6rem;
+/*inter lineado*/
+line-height: 2;
+
+}
+
+/*ESTILOS GLOBALES*/
+/*toma a todas la img con etiqueta img*/
+img{
+  /*para hacer las img responsivas*/
+  max-width: 100%;
+}
+
+.contenedor{
+  width: 95%;
+  max-width: 120rem; /* es igual a 1200px*/
+  /*centara todo lo que este en el encabezado*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1{
+font-size: 3.6rem;
+}
+
+h2{
+font-size: 3.2rem;
+}
+
+h3{
+font-size: 2.8rem;
+}
+
+h4{
+  font-size: 2.5rem;
+}
+
+/* utilidades */
+.seccion{
+  /* separacion del encabesado y del margen */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fw-200{
+  /*cambiamos el ancho de mas sobre nosotros*/
+  font-weight: 200;
+}
+
+.centrar-texto{
+  text-align: center;
+}
+
+/*hace que el boton tome todo el espacio del cuadrado*/
+.d-block {
+   display: block!important;
+ }
+
+
+/* BOTONES. */
+.boton{
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8ram;
+  /*padin para los botones  1rem ariva y abajo 3rem derecha y izquierdad*/
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: center;
+  /*asiendo responsive *******************/
+  display: block;
+  flex: 0 0 100%;
+}
+/*aplicando responsive ********************/
+@media (min-width:768px) {
+  .boton{
+    display: inline-block;
+    flex: 0 0 auto;
+  }
+}
+
+
+.boton-amarillo{
+  background-color: rgb(245, 205, 35);
+}
+
+.boton-verde{
+  background-color: rgba(11, 191, 72, 0.94);
+}
+
+
+
+
+/*Header*/
+.site-header{
+  /*de nosotros*/
+  background-color: rgb(60, 64, 61);
+  padding: 1rem 0 1rem 0;
+}
+
+.site-header.inicio {
+  /*para salir y buscar una img en otra carpeta colocamos ../  */
+  background: url(../img/header.jpg);
+  /*posicionamos la img*/
+  background-position: center;
+  /*que tome el ancho y alto que haiga disponible.*/
+  background-size: cover;
+  height: 100vh;
+  /*adactar la img a la pantalla con el tamallo minimo*/
+  min-height: 60rem; /*es igual a 600px*/
+}
+
+/*posisionar  texto abajo.*/
+.contenido-header{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*lo alinea verticalmente*/
+  justify-content: space-between;
+  /*aplicando responsive ***********************/
+  text-align: center;
+}
+
+/*aplicando responsive ***************************/
+@media (min-width:768px) {
+  .contenido-header{
+    text-align: left;
+  }
+}
+
+.contenido-header h1{
+  color: rgb(244, 244, 244);
+  padding-bottom: 2rem; /*20px*/
+}
+
+.barra{
+  padding-top: 3rem; /*es igual a 30px*/
+}
+
+/*aplicando responsive *************************/
+@media (min-width:768px) {
+  .barra{
+    /*coloca el menu al mismo nivel que el logo.*/
+    display: flex;
+    /*nos permite alineal horizontalmente*/
+    justify-content: space-between;
+    /* nos permite alinear verticalmente.
+      aling-items: flix-end
+    */
+    padding-top: 3rem; /*es igual a 30px*/
+  }
+}
+
+
+ /*navegacion*/
+.navegacion a{
+  font-family: 'Muli', sans-serif;
+  color: rgb(255, 255, 255);
+  /*elimina la line del enlace*/
+  text-decoration: none;
+  font-size: 1.8rem; /* 1.8 rem es igual a  18px */
+
+  /*aplicando responsive ********************************/
+  display: block;
+}
+
+@media (min-width:768px) {
+  .navegacion a{
+    /*para que el menu cuando se haga grande buelva en su pocicion*/
+    display: inline-block;
+    /*para que el menu tenga separacion con los otros*/
+    margin-right: 2rem; /* igual a 20 px*/
+  }
+  .navegacion a:last-of-type{
+    margin: 0;
+  }
+}
+
+
+.navegacion a:hover{
+  color: rgba(2, 156, 35, 0.84);
+}
+
+
+/*icono Nosotros*/
+
+/*aplicando responsive */
+@media (min-width:768px) {
+  .iconos-nosotros{
+    /*aline el contenido seleccionada  horizontal*/
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+.icono{
+  /*alinear texto img*/
+  text-align: center;
+}
+
+/*aplicado para responsive*/
+@media (min-width:68px) {
+  .icono{
+    /*el contenido  lo acopla a un porsentaje*/
+    flex-basis: calc(33.3% - 1rem);
+  }
+}
+
+.icono h3{
+  /*tranforma  todas la h3 en MATUSCULAS*/
+  text-transform: uppercase;
+}
+
+
+
+/*anuncios*/
+.contenido-texto img{
+  text-align: center;
+  width: 500rem;
+  height: 50rem;;
+}
+
+.justificado p{
+  text-align: justify;
+}
+
+/*aplicando responsive*/
+@media (min-width:768px) {
+  .contenedor-anuncios{
+    display: flex;
+    /*crea espacio en cada recuadro de  Casas y Departamentos en Ventas Ven YA  crea recuadros */
+    justify-content:  space-between;
+  /*para tener el contenido de anuncio en 3 columnas*/
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.anuncio{
+  /*para la parte de Casas y Departamentos en Ventas Ven YA  crea recuadros*/
+  border-style: solid;
+  border-color: rgb(102, 102, 105);
+  border-width: 1px;
+  background: rgb(208, 209, 212);
+/*para tener separacion entre ariba y abajo*/
+  margin-bottom: 2rem;
+}
+
+@media (min-width:768px) {
+  .anuncio{
+      flex:0 0 calc(33.3% - 1rem);
+  }
+}
+
+
+.contenido-anuncio{
+  padding: 1rem;
+}
+
+/*para retirar el margin y el texto no se vea muy abajo*/
+.contenido-anuncio h3,
+.contenido-anuncio p {
+  margin: 0;
+}
+
+.precio{
+  color: rgb(11, 5, 77);
+  font-weight: 700;
+}
+
+.iconos-caracteristicas{
+  /*quitamos vietas de la img*/
+  list-style: none;
+  /*quitamos espacio al margen*/
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.iconos-caracteristicas li{
+  /* para que tengan un espacio uno del otro*/
+  flex: 1;
+  /*para que el nuemrose coloque alado d ela img*/
+  display: flex;
+}
+
+.iconos-caracteristicas li img{
+  margin-right: 20px;
+}
+
+
+
+/*colocar el boton verde en la derecha*/
+.ver-todas{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Contacto Home*/
+.imagen-contacto{
+  background-image: url(../img/encuentra.jpg);
+  /*nos ayuda a centarar y con el cover a  adactar la img al espacio*/
+  background-position: center;
+  background-size: cover;
+  height: 35rem;
+  /*centrar verticalmente*/
+  display: flex;
+  align-items: center;
+}
+
+.contenido-contacto{
+  /*para que no note todo el espacio cuando se vea en movil*/
+  flex: 0 0 95%;
+  color: rgb(216, 232, 233);
+}
+
+.contenido-contacto p{
+  font-size: 1.9rem;
+}
+
+/*seccion inferiro*/
+@media (min-width:768px) {
+  .seccion-inferior{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .seccion-inferior . blog{
+    flex-basis: 60%;
+  }
+
+  .seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+  }
+}
+
+
+
+.entrada-blog{
+  margin-bottom: 1.8rem;
+}
+
+/*aplicando responsive  para que las img se vean mas grandes parte de nuestro blog  */
+@media (min-width:768px) {
+  .entrada-blog{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+.entrada-blog:last-of-type{
+  margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+  .entrada-blog .imagen{
+    /*hacer la img mas pequenia*/
+    flex-basis: 40%;
+  }
+
+  .entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+  }
+}
+
+.texto-entrada a{
+  color: rgb(11, 13, 13);
+  /* QUITAMOS LINEA DE ENLACE CON */
+  text-decoration: none;
+}
+
+.texto-entrada h4{
+  margin: 0;
+  /* INTERLINEADO  */
+  line-height: 1rem;
+}
+
+/*::after es un seudo elemento*/
+/*vamos a creaun una line dejabo de h4*/
+.texto-entrada h4::after{
+   content: '';
+   display: block;
+   width: 15rem;
+   height: .5rem;
+   background-color: rgba(29, 162, 34, 0.91);
+   /*controla le linea verdee*/
+   margin-top: 1rem;
+}
+
+.texto-entrada span{
+  color: rgb(193, 127, 1);
+}
+
+
+/*TESTIMONIALES*/
+.testimonial{
+  background-color: rgba(62, 195, 35, 0.92);
+  /*tamanio a las letras*/
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  /*para redondear las esquinas*/
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.testimonial p{
+  text-align: right;
+}
+
+/*PARA CREAR LAS COMILLAS EN EL TESTIMONIAL*/
+.testimonial blockquote::before{
+  content: '';
+  background-image: url(../img/comilla.svg);
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  position: absolute;
+/*para pocisionar la comilla*/
+  top: 2rem;
+  left: -3rem;
+}
+
+.testimonial blockquote{
+  /*posicionar las comillas*/
+  position: relative;
+  padding: 3rem;
+}
+
+/* footer */
+.site-footer{
+  background-color: rgb(63, 65, 68);
+  margin: 0;
+}
+
+.contenedor-footer{
+  padding: 1rem 0;
+  text-align: center;
+}
+/*responsive ***************/
+@media (min-width:768px) {
+  .contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.copyright{
+  margin: 0;
+  color: rgb(247, 247, 247);
+}
+
+
+/* ESTILOS PARA  NOSOTROS ************************************/
+@media (min-width:768px) {
+  .contenido-nosotros{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 2.6rem;
+  }
+}
+
+
+
+.texto-nosotros blockquote{
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+ .texto-nosotros p{
+   text-align: justify;
+ }
+
+
+/*  CONTACTO */
+.contacto p{
+  font-size: 1.2rem;
+  color: rgb(65, 72, 73);
+}
+
+legend{
+  font-size: 2.2rem;
+  color: rgb(70, 63, 70);
+}
+
+label{
+  font-weight: 700;
+  text-transform: uppercase;
+
+  /*nos permite colov=car la cajas en columnas*/
+  display: block;
+}
+
+/*aplicar a todos los input ecepto al boton enviar consulta */
+input:not([type="submit"]),
+textarea,
+select{
+  padding: 1rem;
+  /*para que tome todo el espacio disponible*/
+  display: block;
+  width: 100%;
+  background-color: rgb(166, 162, 157);
+  /*espacio uno con otros*/
+  margin-bottom: 2rem;
+  /*borde para la caja de texto*/
+  border: none;
+  border-radius: 1rem;
+}
+/*para aplicar al select necesitamos aplicar esto*/
+select{
+  -webkit-appearance:none
+  appearance: none;
+}
+
+textarea{
+  height: 20rem;
+}
+
+
+.forma-contacto{
+  max-width: 600px;
+}
